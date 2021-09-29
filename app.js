@@ -2,6 +2,12 @@ const express = require("express");
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Welcome to my app"
+  });
+});
+
 app.get("/api/v1", (req, res) => {
   res.json({
     message: "Testing Heroku Deploy"
